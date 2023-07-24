@@ -12,9 +12,15 @@ export default function Conundrum(){
     // const thingsElement = thingsArray.map((items) => {
     //     return <p>{items}</p>
     // })
+    function click(){
+        console.log(thingsArray)
+        return(
+            "Things" + thingsArray.length + 1
+        )
+    }
     return(
         <div>
-            <button onClick={()=>"Thing" + thingsArray.length+1}>Add Items</button>
+            <button onClick={click}>Add Items</button>
             {thingsElement}  
         </div>
     )
