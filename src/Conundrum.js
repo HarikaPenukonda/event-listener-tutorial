@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Conundrum(){
-    const thingsArray = ["Thing 1", "Thing 2"]
+    const thingsArray = ["Thing 1", "Thing 2"];
 
     /*
         use the array length +1 to determine the number
@@ -9,18 +9,17 @@ export default function Conundrum(){
         listerner console.log() after adding the new item to the array
     */    
     const thingsElement = thingsArray.map(items=><p key={items}>{items}</p>)
-    // const thingsElement = thingsArray.map((items) => {
-    //     return <p>{items}</p>
-    // })
-    function click(){
-        console.log(thingsArray)
-        return(
-            "Things" + thingsArray.length + 1
-        )
+    
+
+    function addItem(){
+        const newThingText = `Thing${thingsArray.length + 1}`
+        thingsArray.push(newThingText)
+        console.log(thingsArray);
     }
+    
     return(
         <div>
-            <button onClick={click}>Add Items</button>
+            <button onClick={addItem}>Add Items</button>
             {thingsElement}  
         </div>
     )
