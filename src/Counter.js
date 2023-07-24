@@ -7,7 +7,9 @@ import React from "react";
 export default function Counter(){
     const [count,setCount] = React.useState(0)
     function add(){
-        setCount(count + 1)
+        setCount(function(){
+           return count + 1
+        })
     }
 
     function subract(){
