@@ -8,9 +8,7 @@ export default function Counter(){
     const [count,setCount] = React.useState(0)
     function add(){
         // provide a callback function
-        setCount(function(oldValue){
-           return oldValue + 1
-        })
+        setCount(oldValue => oldValue + 1)
     }
 
     function subract(){
