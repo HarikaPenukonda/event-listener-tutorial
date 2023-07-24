@@ -8,7 +8,10 @@ export default function Conundrum(){
         a <p> element for each item and render them on the page
         below the button
     */ 
-    const thingsElement = thingsArray.map(items=><p>{items}</p>)
+    const thingsElement = thingsArray.map(items=><p>key={items}</p>)
+    // const thingsElement = thingsArray.map((items) => {
+    //     return <p>{items}</p>
+    // })
     return(
         <div>
             <button>Add Items</button>
