@@ -1,11 +1,13 @@
 import React from "react";
 //import Conundrum from "./Conundrum";
-import StateDemo from "./StateDemo";
+//import StateDemo from "./StateDemo";
+import Counter from "./Counter";
 
 export default function App(){
     return(
         // <Conundrum/>
-        <StateDemo/>
+        //<StateDemo/>
+        <Counter/>
     )
 }
 
