@@ -1,9 +1,5 @@
 import React from "react";
 
-/*
-    Challenge: Set up state to tract our count (initial value 0)
-*/
-
 export default function Counter(){
     const [count,setCount] = React.useState(0)
     /*
@@ -15,9 +11,12 @@ export default function Counter(){
         // provide a callback function
         setCount(prevCount => prevCount + 1)
     }
+    
+    // Challenge: update `subract` to use a callback function
+
 
     function subract(){
-         setCount(count - 1)
+         setCount(prevCount => prevCount - 1)
     }
     return(
         <div>
