@@ -1,9 +1,11 @@
 import React from "react";
-import Conundrum from "./Conundrum";
+//import Conundrum from "./Conundrum";
+import StateDemo from "./StateDemo";
 
 export default function App(){
     return(
-        <Conundrum/>
+        // <Conundrum/>
+        <StateDemo/>
     )
 }
 
