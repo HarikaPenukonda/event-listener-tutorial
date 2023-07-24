@@ -13,6 +13,7 @@ export  default function StateDemo(){
    */
     function handleClick(){
         setIsImportant("No")
+        // If we click again, the value does not change, it shows "No"
     }
     return(
         <div className="state">
