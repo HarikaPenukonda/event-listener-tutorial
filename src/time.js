@@ -30,6 +30,7 @@ if(hours > 4 && hours < 12 ){
 }
 
 function greeting(name){
+    // name="Archie" -> Good afternoon, Archie
     return console.log(`Good ${timeOfDay}, ${name}`)
     
 }
