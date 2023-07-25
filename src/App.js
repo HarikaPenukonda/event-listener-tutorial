@@ -3,7 +3,8 @@ import React from "react";
 //import Conundrum from "./Conundrum";
 //import StateDemo from "./StateDemo";
 //import Counter from "./Counter";
-import ComplexArray from "./complexArrays"
+//import ComplexArray from "./complexArrays"
+import ComplexA from "./ComplexA"
 
 export default function App(){
     return(
@@ -11,7 +12,8 @@ export default function App(){
         //<StateDemo/>
         //<Counter/>
         //<Ternary/>
-        <ComplexArray/>
+        //<ComplexArray/>
+        <ComplexA/>
     )
 }
 
