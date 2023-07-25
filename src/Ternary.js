@@ -8,13 +8,7 @@ export default function Ternary(){
         - Display "Yes" if `isGoingOut` is true and No otherwise
     */
     const [isGoingOut,setIsGoingOut] = React.useState(true)
-
-    // one way
-    // function handleClick(){
-    //     setIsGoingOut(prevState => prevState ? "Yes" : "No")
-    // }
-
-    // another way
+    
     function handleClick(){
         setIsGoingOut(prevState => !prevState)
     }
