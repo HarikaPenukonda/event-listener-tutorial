@@ -1,15 +1,17 @@
 import React from "react";
-import Ternary from "./Ternary";
+//import Ternary from "./Ternary";
 //import Conundrum from "./Conundrum";
 //import StateDemo from "./StateDemo";
 //import Counter from "./Counter";
+import ComplexArray from "./complexArrays"
 
 export default function App(){
     return(
         // <Conundrum/>
         //<StateDemo/>
         //<Counter/>
-        <Ternary/>
+        //<Ternary/>
+        <ComplexArray/>
     )
 }
 
