@@ -24,10 +24,7 @@ export default function Ternary(){
     return(
         <div>
             {/* <h1 onClick={handleClick}>Do I feel like going out tonight?</h1> */}
-            <h1 onClick={() =>  
-                setIsGoingOut(prevState => !prevState)
-                }
-            >Do I feel like going out tonight?</h1>
+            <h1 onClick={() =>  setIsGoingOut(prevState => !prevState)}>Do I feel like going out tonight?</h1>
             <h1>{isGoingOut ? "Yes" : "No"}</h1>
         </div>
     )
