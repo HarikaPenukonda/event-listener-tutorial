@@ -28,7 +28,7 @@ export default function ComplexArray(){
         //setThingsArray(prevThingsArray => "Thing" + prevThingsArray.length + 1)
         // return a new array, spread in the existing array
         setThingsArray(prevThingsArray => 
-            [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`])
+            [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]) // [Thing 1, Thing 2, Thing 3 ....]
     }
 
     const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
