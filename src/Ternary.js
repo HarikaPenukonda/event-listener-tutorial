@@ -6,14 +6,15 @@ export default function Ternary(){
         to determine the text that should display on the page
     */
 
-    const isGoingOut = true
+    const isGoingOut = false
 
     let answer // Use Ternary here
-    if(isGoingOut === true){
-        answer = "Yes"
-    }else{
-        answer = "No"
-    }
+    // if(isGoingOut === true){
+    //     answer = "Yes"
+    // }else{
+    //     answer = "No"
+    // }
+    answer = isGoingOut ? "Yes" : "No"
 
     return(
         <div>
