@@ -2,22 +2,23 @@ import React from "react";
 
 export default function ComplexA(){
 
-    /*
-        Challenge: See if you can do it all by yourself
-    */
-
-    const[infoThings, setInfoThings] = React.useState(["Thing 1", "Thing 2"])
+    const[getThings,setGetThings] = React.useState(["Thing 1", "Thing 2"])
 
     function handleClick(){
-        setInfoThings(prevItems => [...prevItems, `Thing ${prevItems.length + 1}`]) // [Things 1, Things2,]
+        setGetThings(prevItems => [...prevItems, `Thing ${prevItems.length + 1}`])
     }
 
-    const thingsElements = infoThings.map(things => <p>{things}</p>)
-    return(
-            <div>
-                <button onClick={handleClick}>Add Item</button>
-                {thingsElements}
-            </div>
-    )
+    const thingsElement = getThings.map(things => <p>{things}</p>)
+
+    /*
+        Challenge: See if you can do it all again by yourself
+    */
+
+   return(
+    <div>
+        <button onClick={handleClick}>Add Item</button>
+        {thingsElement}
+    </div>
+   )
 
 } 
