@@ -15,7 +15,11 @@ export default function ComplexObjects(){
 
         `true` => "star-filled.png"
         `false => "star-empty.png"
+
+        let starIcon = // you code
     */
+
+    let starIcon = contact.isFavourite ? "star-filled.png" : "star-empty.png"
 
     function toggleFavourite(){
         setContact(prevState => !prevState)
@@ -28,7 +32,7 @@ export default function ComplexObjects(){
                     className="card--image"
                 />
                 <div className="card--info">
-                <img src={contact.isFavourite ? "./images/star-filed.png" : "./images/star-empty.png"}
+                <img src={`/images/${starIcon}`}
                     width={"20px"}
                     onClick={toggleFavourite}/>
                 <h2 className="card--name">{contact.firstName} {contact.lastName}</h2>
