@@ -22,13 +22,13 @@ export default function ComplexObjects(){
     let starIcon = contact.isFavourite ? "star-filled.png" : "star-empty.png"
 
     function toggleFavourite(){
-        setContact(prevContact =>{
-            return{
-                ...prevContact, // spread operator
-                isFavourite: !prevContact.isFavourite
-            }
-        })
-       console.log("toggled")
+       setContact(prevContact =>{
+        return{
+            ...prevContact,
+            isFavourite : !prevContact.isFavourite
+        }
+        
+       })
     }
 
     return(
