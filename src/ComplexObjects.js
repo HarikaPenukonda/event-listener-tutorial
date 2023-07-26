@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ComplexObjects(){
-    const [contact, seContact] = React.useState({
+    const [contact, setContact] = React.useState({
         "firstName" : "John",
         "lastName" : "Doe",
         "phone" : "+1 (123) 456 7890",
@@ -10,12 +10,15 @@ export default function ComplexObjects(){
     })
 
     /*
-        Challenge 1 : Fill in the values in the markup
-        using the properties of our state object above
+        Challenge 2 : Use a ternary to determine which star image filename
+        should be used based on `contact.isFavourite` property
+
+        `true` => "star-filled.png"
+        `false => "star-empty.png"
     */
 
     function toggleFavourite(){
-        console.log("Toggle Favourite")
+        setContact(prevState => !prevState)
     }
 
     return(
@@ -25,10 +28,9 @@ export default function ComplexObjects(){
                     className="card--image"
                 />
                 <div className="card--info">
-                <img src="./images/star.png"
+                <img src={contact.isFavourite ? "./images/star-filed.png" : "./images/star-empty.png"}
                     width={"20px"}
-                    onClick={toggleFavourite}
-                />
+                    onClick={toggleFavourite}/>
                 <h2 className="card--name">{contact.firstName} {contact.lastName}</h2>
                 <p className="card--contact">{contact.phone}</p>
                 <p className="card--contact">{contact.email}</p>
