@@ -10,7 +10,7 @@ export default function ComplexObjects(){
     })
 
     /*
-        Challenge : Fill in the values in the markup
+        Challenge 1 : Fill in the values in the markup
         using the properties of our state object above
     */
 
