@@ -22,14 +22,20 @@ export default function ComplexObjects(){
     let starIcon = contact.isFavourite ? "star-filled.png" : "star-empty.png"
 
     function toggleFavourite(){
-       setContact(prevContact =>{
-        return{
+        setContact(prevContact => ({
             ...prevContact,
             isFavourite : !prevContact.isFavourite
-        }
-        
-       })
+         })
+        )
     }
+    //    setContact(prevContact =>{
+    //     return{
+    //         ...prevContact,
+    //         isFavourite : !prevContact.isFavourite
+    //     }
+        
+    //    })
+    //}
 
     return(
         <main>
