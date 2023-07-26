@@ -1,10 +1,11 @@
 import React from "react";
+import ComplexObjects from "./ComplexObjects";
 //import Ternary from "./Ternary";
 //import Conundrum from "./Conundrum";
 //import StateDemo from "./StateDemo";
 //import Counter from "./Counter";
 //import ComplexArray from "./complexArrays"
-import ComplexA from "./ComplexA"
+//import ComplexA from "./ComplexA"
 
 export default function App(){
     return(
@@ -13,7 +14,8 @@ export default function App(){
         //<Counter/>
         //<Ternary/>
         //<ComplexArray/>
-        <ComplexA/>
+        //<ComplexA/>
+        <ComplexObjects/>
     )
 }
 
