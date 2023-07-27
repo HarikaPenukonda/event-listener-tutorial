@@ -11,9 +11,7 @@ import BoxApp from "./Boxes/BoxApp";
 
 export default function App(){
     return(
-        <BoxApp
-            darkMode={false}
-        />
+        <BoxApp/>
         //<MyApp/>
         // <Conundrum/>
         //<StateDemo/>
