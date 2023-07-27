@@ -18,8 +18,6 @@ export default function ComplexObjects(){
             new `isFIlled` prop.
     */
 
-    let starIcon = contact.isFavourite ? "star-filled.png" : "star-empty.png"
-
     function toggleFavourite(){
         setContact(prevContact => ({
             ...prevContact,
@@ -38,6 +36,11 @@ export default function ComplexObjects(){
                 <Star
                     isFilled={contact.isFavourite}
                 />
+                {/* Our conundrum is that we have a child component<Star/> that is recieving
+                the value of `isFavourite` through props but it is not receiving the ability
+                to change that state.
+                How can i give my child compoenent<Star/> the abilty to make changes to the state
+                that lives inside the parent component <ComplexObjects2/> */}
                 <h2 className="card--name">{contact.firstName} {contact.lastName}</h2>
                 <p className="card--contact">{contact.phone}</p>
                 <p className="card--contact">{contact.email}</p>
