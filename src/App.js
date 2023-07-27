@@ -1,9 +1,9 @@
 import React from "react";
-//import ComplexObjects from "./ComplexObjects";
+import ComplexObjects2 from "./ComplexObjects2";
 //import Ternary from "./Ternary";
 //import Conundrum from "./Conundrum";
 //import StateDemo from "./StateDemo";
-import Counter2 from "./Counter2";
+//import Counter2 from "./Counter2";
 //import ComplexArray from "./complexArrays"
 //import ComplexA from "./ComplexA"
 
@@ -15,8 +15,8 @@ export default function App(){
         //<Ternary/>
         //<ComplexArray/>
         //<ComplexA/>
-        //<ComplexObjects/>
-        <Counter2/>
+        <ComplexObjects2/>
+        //<Counter2/>
     )
 }
 
