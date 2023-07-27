@@ -1,15 +1,20 @@
 import React from "react";
 import boxes from "./boxes";
 
-export default function BoxApp(){
+export default function BoxApp(props){
 
-    const [box,setBox] = React.useState(boxes)
-
+    const [square,setSquare] = React.useState(boxes)
+    
+    /*
+        Challenge : use a ternary to determine the backgroundColor
+        If darkMode is true, set is to #222222
+        If darkMode is false, set it to #cccccc
+    */
     const styles = {
-        backgroundColor : "black"
+        backgroundColor : props.darkMode ? "#222222" : "#cccccc"
     }
 
-    const boxElements = box.map(
+    const boxElements = square.map(
         items => (
             <div 
             className="box" 
