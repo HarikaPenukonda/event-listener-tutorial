@@ -7,7 +7,6 @@ export default function Box(props){
     return(
         <div 
             className="box" 
-            key={props.id}
             style={styles}
             alt="box"
             ></div>

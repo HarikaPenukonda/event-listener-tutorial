@@ -20,6 +20,7 @@ export default function BoxApp(){
     const boxElements = square.map(
         items =>(
             <Box
+            key={items.id}
             on={items.on}
             />
         )
