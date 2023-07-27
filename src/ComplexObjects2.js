@@ -1,4 +1,5 @@
 import React from "react";
+import Star from "./Star";
 
 export default function ComplexObjects(){
     const [contact, setContact] = React.useState({
@@ -6,17 +7,15 @@ export default function ComplexObjects(){
         "lastName" : "Doe",
         "phone" : "+1 (123) 456 7890",
         "email" : "itsantihero@taylorswift.com",
-        "isFavourite" : false
+        "isFavourite" : true
     })
 
     /*
-        Challenge 2 : Use a ternary to determine which star image filename
-        should be used based on `contact.isFavourite` property
-
-        `true` => "star-filled.png"
-        `false => "star-empty.png"
-
-        let starIcon = // you code
+        Challenge : Move the star image into its own component
+            - It should recieve a prop called `isFilled` that it uses to
+            determine which icon it will display
+            - Import and render that component, passing the value `isFavourite` to the 
+            new `isFIlled` prop.
     */
 
     let starIcon = contact.isFavourite ? "star-filled.png" : "star-empty.png"
@@ -28,14 +27,6 @@ export default function ComplexObjects(){
          })
         )
     }
-    //    setContact(prevContact =>{
-    //     return{
-    //         ...prevContact,
-    //         isFavourite : !prevContact.isFavourite
-    //     }
-        
-    //    })
-    //}
 
     return(
         <main>
@@ -44,9 +35,9 @@ export default function ComplexObjects(){
                     className="card--image"
                 />
                 <div className="card--info">
-                <img src={`/images/${starIcon}`}
-                    width={"20px"}
-                    onClick={toggleFavourite}/>
+                <Star
+                    isFilled={contact.isFavourite}
+                />
                 <h2 className="card--name">{contact.firstName} {contact.lastName}</h2>
                 <p className="card--contact">{contact.phone}</p>
                 <p className="card--contact">{contact.email}</p>
