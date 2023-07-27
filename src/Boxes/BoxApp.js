@@ -1,27 +1,29 @@
 import React from "react";
 import boxes from "./boxes";
+import Box from "./Box";
 
-export default function BoxApp(props){
+export default function BoxApp(){
 
     const [square,setSquare] = React.useState(boxes)
     
     /*
-        Challenge : use a ternary to determine the backgroundColor
-        If darkMode is true, set is to #222222
-        If darkMode is false, set it to #cccccc
+        Challenge 2 : 
+        1. create a seperate component called "Box and replace the div above
+        with our <Box/> components"
+        2. Pass the Box component a prop called `on` with the value of the same
+        name from the `boxes` objects
+        3. In the box compoenent, apply dynamix styles to determine the background
+        color of the box. If it is `on`, set the backgroundColor to #222222. If off
+        set it to "none"
     */
-    const styles = {
-        backgroundColor : props.darkMode ? "#222222" : "#cccccc"
-    }
 
     const boxElements = square.map(
-        items => (
-            <div 
-            className="box" 
-            key={items.id}
-            style={styles}
-            ></div>
+        items =>(
+            <Box
+            on={items.on}
+            />
         )
+            
     )
     /*
         style prop - in react we are not going to use string "" the same way we 
