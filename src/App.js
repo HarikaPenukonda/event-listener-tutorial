@@ -1,21 +1,23 @@
 import React from "react";
-import ComplexObjects2 from "./ComplexObjects2";
+//import ComplexObjects2 from "./ComplexObjects2";
 //import Ternary from "./Ternary";
 //import Conundrum from "./Conundrum";
 //import StateDemo from "./StateDemo";
 //import Counter2 from "./Counter2";
 //import ComplexArray from "./complexArrays"
 //import ComplexA from "./ComplexA"
+import MyApp from "./PassingData/MyApp";
 
 export default function App(){
     return(
+        <MyApp/>
         // <Conundrum/>
         //<StateDemo/>
         //<Counter/>
         //<Ternary/>
         //<ComplexArray/>
         //<ComplexA/>
-        <ComplexObjects2/>
+        //<ComplexObjects2/>
         //<Counter2/>
     )
 }
