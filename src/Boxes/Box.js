@@ -20,7 +20,7 @@ export default function Box(props){
     }
     
     const styles = {
-        backgroundColor : light ? "#222222" : "none"
+        backgroundColor : light ? "#222222" : "transparent"
     }
     return(
         <div 
