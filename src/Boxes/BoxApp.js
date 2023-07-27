@@ -5,20 +5,40 @@ export default function BoxApp(){
 
     const [box,setBox] = React.useState(boxes)
 
+    const styles = {
+        backgroundColor : "black"
+    }
+
     const boxElements = box.map(
         items => (
-            <div className="box" key={items.id}></div>
+            <div 
+            className="box" 
+            key={items.id}
+            style={styles}
+            ></div>
         )
     )
-
     /*
-        Challenge part 1:
-        1. Initialize state with the default value of the array
-        pulled in from boxes.js
-        2. Map over the state array and display each one as an
-        empty square.
-    */
+        style prop - in react we are not going to use string "" the same way we 
+        did in html, instead we are going to provide an object {}
 
+        - {} does not represent an object it simply represents me entering into
+        javascript outside of JSX or rather it allows me to put javascript inside
+        of JSX 
+
+        - since we need to represent style as an object we are going to use second set 
+        of curly braces, this inner set of curly braces represents an object and outer
+        set of curly braces represents going into javascript from JSX style{{}}
+
+        - to avoid confusion we can create a seperate variable styles and set that
+        to an object
+
+        - we should use camel case for the object properties and also when i am 
+        modifying the properties of a DOM element 
+        eg : document.getElementById("something").style.backgroundColor = "red"
+        similarly we use backgroundColor instead of background-color
+
+    */
     return(
         <main>
             {boxElements}
