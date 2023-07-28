@@ -7,29 +7,11 @@ export default function BoxApp(){
     const [square,setSquare] = React.useState(boxes)
 
     function toggle(id){
-        /*
-            challenge : use setSquare to update the correct square in the array
-
-            Make sure not to directly modify state!
-
-        */
-       setSquare(prevState => {
-        const newSquares = []
-        // imperative
-        for(let i=0; i<prevState.length;i++){
-            const currentSquare = prevState[i]
-            if(currentSquare.id === id){
-                const updatedSquare = {
-                    ...currentSquare,
-                    on : !currentSquare.on
-                }
-                newSquares.push(updatedSquare)
-            }
-            else{
-                newSquares.push(currentSquare)
-            }
-        }
-        return newSquares
+        // using map method we can return a new array
+        setSquare(prevState => {
+            return prevState.map((square)=>{
+                return square.id === id ? {...square, on : !square.on} : square
+        })
        })
     }
 
