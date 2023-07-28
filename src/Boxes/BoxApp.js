@@ -18,9 +18,8 @@ export default function BoxApp(){
         items =>(
             <Box
             key={items.id}
-            id={items.id}
             on={items.on}
-            toggle={toggle}
+            toggle={()=>toggle(items.id)}
             />
         )
             
