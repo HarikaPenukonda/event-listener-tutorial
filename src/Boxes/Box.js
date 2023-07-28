@@ -13,21 +13,21 @@ export default function Box(props){
 
     */
 
-    const [light,setLight] = React.useState(props.on)
+    //const [light,setLight] = React.useState(props.on)
 
-    function handleClick(){
-        setLight(prevState => !prevState)
-    }
+    // function handleClick(){
+    //     setLight(prevState => !prevState)
+    // }
     
     const styles = {
-        backgroundColor : light ? "#222222" : "transparent"
+        backgroundColor : props.on ? "#222222" : "transparent"
     }
     return(
         <div 
             className="box" 
             style={styles}
             alt="box"
-            onClick={handleClick}
+            onClick={props.toggle}
             ></div>
             
     )

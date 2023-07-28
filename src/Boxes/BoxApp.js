@@ -7,21 +7,22 @@ export default function BoxApp(){
     const [square,setSquare] = React.useState(boxes)
     
     /*
-        Challenge 2 : 
-        1. create a seperate component called "Box and replace the div above
-        with our <Box/> components"
-        2. Pass the Box component a prop called `on` with the value of the same
-        name from the `boxes` objects
-        3. In the box compoenent, apply dynamix styles to determine the background
-        color of the box. If it is `on`, set the backgroundColor to #222222. If off
-        set it to "none"
+        Challenge : Create a toggle() function that logs "clicked" to the console.
+
+        Pass that function down to each of the components and set it up so that
+        when they get clicked it runs the function
     */
+
+    function toggle(){
+        console.log("Clicked!")
+    }
 
     const boxElements = square.map(
         items =>(
             <Box
             key={items.id}
             on={items.on}
+            toggle={toggle}
             />
         )
             
