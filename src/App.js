@@ -1,5 +1,6 @@
 import React from "react";
-import BoxApp from "./Boxes/BoxApp";
+//import BoxApp from "./Boxes/BoxApp";
+import MyApp1 from "./Practice-PassingData/MyApp1";
 //import ComplexObjects2 from "./ComplexObjects2";
 //import Ternary from "./Ternary";
 //import Conundrum from "./Conundrum";
@@ -11,8 +12,8 @@ import BoxApp from "./Boxes/BoxApp";
 
 export default function App(){
     return(
-        <BoxApp/>
-        //<MyApp/>
+        //<BoxApp/>
+        <MyApp1/>
         // <Conundrum/>
         //<StateDemo/>
         //<Counter/>
