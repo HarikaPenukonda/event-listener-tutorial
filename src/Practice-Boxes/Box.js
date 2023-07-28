@@ -9,7 +9,7 @@ export default function Box(props){
         <div 
             className="box"
             style={styles}
-            onClick={props.toggle()}>
+            onClick={props.toggle}>
         </div>
     )
 }

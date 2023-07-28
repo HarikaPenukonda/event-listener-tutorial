@@ -17,7 +17,6 @@ export default function MyBoxApp(){
     const boxElements = squares.map(prevState => (
         <Box
             key={prevState.id}
-            // id={prevState.id}
             on={prevState.on}
             toggle={()=>toggle(prevState.id)}
         />
