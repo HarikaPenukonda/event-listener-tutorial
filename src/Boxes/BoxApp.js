@@ -7,7 +7,29 @@ export default function BoxApp(){
     const [square,setSquare] = React.useState(boxes)
 
     function toggle(id){
-        console.log(id)
+        /*
+            challenge : use setSquare to update the correct square in the array
+
+            Make sure not to directly modify state!
+
+        */
+       setSquare(prevState => {
+        const newSquares = []
+        for(let i=0; i<prevState.length;i++){
+            const currentSquare = prevState[i]
+            if(currentSquare.id === id){
+                const updatedSquare = {
+                    ...currentSquare,
+                    on : !currentSquare.on
+                }
+                newSquares.push(updatedSquare)
+            }
+            else{
+                newSquares.push(currentSquare)
+            }
+        }
+        return newSquares
+       })
     }
 
     const boxElements = square.map(
