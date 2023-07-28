@@ -7,7 +7,7 @@ export default function MyBoxApp(){
 
     function toggle(id){
         setSquares(prevSquares => {
-            return squares.map((squares)=>{
+            return prevSquares.map((squares)=>{
                 return squares.id === id ? {...squares, on : !squares.on} : squares
             })
         })
