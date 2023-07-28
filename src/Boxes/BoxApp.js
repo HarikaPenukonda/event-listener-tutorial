@@ -15,6 +15,7 @@ export default function BoxApp(){
         */
        setSquare(prevState => {
         const newSquares = []
+        // imperative
         for(let i=0; i<prevState.length;i++){
             const currentSquare = prevState[i]
             if(currentSquare.id === id){
