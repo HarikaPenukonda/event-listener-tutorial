@@ -7,12 +7,11 @@ export default function BoxApp(){
     const [square,setSquare] = React.useState(boxes)
 
     function toggle(id){
-        // using map method we can return a new array
-        setSquare(prevState => {
-            return prevState.map((square)=>{
-                return square.id === id ? {...square, on : !square.on} : square
+        setSquare(prevSquares => {
+            return prevSquares.map((square)=>{
+                return square.id === id ? {...square, on:!square.on} : square
+            })
         })
-       })
     }
 
     const boxElements = square.map(
